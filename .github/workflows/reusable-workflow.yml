@@ -21,5 +21,4 @@ jobs:
       output1: ${{steps.step1.outputs.firstword}}
     steps:
       - id: step1
-        name: Print Path
-        run: echo "Test" >> $GITHUB_OUTPUT
+        run: echo "Test"
