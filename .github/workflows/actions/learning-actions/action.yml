@@ -4,7 +4,7 @@ inputs:
   file-path:
     description: "Path to test script"
     required: true
-    default: "test-file.js"
+    default: "test-file.txt"
 outputs:
   results-file:
     description: "Path to results file"
