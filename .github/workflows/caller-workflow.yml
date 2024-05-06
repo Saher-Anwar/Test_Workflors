@@ -12,4 +12,4 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v4
       - name: calling other workflow
-        uses: ./.github/workflows/.reusable-workflow.yml
+        uses: ./.github/workflows/reusable-workflow
