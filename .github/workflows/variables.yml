@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: "Creating environment variables"
         run: |
-          - echo "${{github.workspace}} + ${{github.actor}}"
-          - node client.js
+          echo "${{github.workspace}} + ${{github.actor}}"
+          node client.js
         env:
           TEST: testing
