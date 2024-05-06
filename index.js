@@ -14,7 +14,7 @@ async function run() {
       console.log('File content:', fileContent);
   
       // Set the output 'results-file' with the path to the results file
-      core.setOutput('results-file', 'path/to/results-file.txt');
+      core.setOutput('results-file', 'results-file.txt');
     } catch (error) {
       // If an error occurs, set the action as failed
       core.setFailed(error.message);
