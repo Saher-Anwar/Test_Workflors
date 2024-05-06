@@ -1,0 +1,27 @@
+name: Sharing Data Between Jobs
+run-name: Testing sharing of data
+on:
+  push:
+    branches:
+      - sharing_data
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-log-file
+          path: output.log
+  examples_job2:
+    runs-on: ubuntu-latest
+    needs: example_job
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: output-log-file
