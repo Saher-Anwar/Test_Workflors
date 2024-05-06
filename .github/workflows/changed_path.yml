@@ -1,0 +1,13 @@
+name: Trigger Workflow based on changed file
+run-name: Testing to see if changed file triggers workflow
+on:
+    push:
+        paths:
+            - **.js
+
+jobs:
+    example-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Testing 
+              run: echo "Does this get triggered?"
