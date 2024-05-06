@@ -21,4 +21,4 @@ jobs:
       output1: ${{steps.step1.outputs.firstword}}
     steps:
       - id: step1
-        run: echo "Test"
+        run: echo "firstword=hello" >> $GITHUB_OUTPUT
