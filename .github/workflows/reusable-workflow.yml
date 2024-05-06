@@ -22,4 +22,4 @@ jobs:
     steps:
       - id: step1
         name: Print Path
-        run: echo config path ':' ${{inputs.config-path}}
+        run: echo config path ':' ${{inputs.config-path}} >> $GITHUB_OUTPUT
