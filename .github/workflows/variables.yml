@@ -1,5 +1,5 @@
 name: Using variables in your workflows
-run-name: ${{github.action_repository}} is where this is being run
+run-name: Testing to see how variables work
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ jobs:
   variable_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Creating environment variables
+      - name: Creating environment variables in ${{github.workspace}}
         run: node client.js
         env:
           TEST: testing
