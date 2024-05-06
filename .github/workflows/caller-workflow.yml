@@ -8,3 +8,7 @@ on:
 jobs:
   caller-job:
     uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      config-path: someRandPath
+    secrets:
+      envPAT: Last
