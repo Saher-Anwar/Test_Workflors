@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: calling other workflow
-        uses: ./.reusable-workflow.yml
+        uses: ./.github/workflows/.reusable-workflow.yml
