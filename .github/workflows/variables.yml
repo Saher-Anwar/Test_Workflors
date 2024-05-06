@@ -9,7 +9,7 @@ jobs:
   variable_job:
     runs-on: ubuntu-latest
     steps:
-      - name: "Creating environment variables in ${{github.workspace}}"
+      - name: "Creating environment variables in ${{github.workspace}} ${{github.actor}}"
         run: node client.js
         env:
           TEST: testing
