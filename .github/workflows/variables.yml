@@ -9,9 +9,11 @@ jobs:
   variable_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checking out
+        run: action/checkout@v4
       - name: "Creating environment variables"
         run: |
-          echo "${{github.workspace}} + ${{github.actor}}"
+          echo "Current working dir: ${{github.workspace}}"
           node client.js
         env:
           TEST: testing
