@@ -11,4 +11,6 @@ jobs:
           node-version: "20"
       - run: npm install -g bats
       - run: bats -v
+      - run: npm install fs
+      - run: npm install @actions/core
       - uses: ./.github/workflows/actions/learning-actions
