@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Creating environment variables in ${{github.workspace}} ${{github.actor}}"
-        run: node client.js
+        run: echo "${{github.workspace}} + ${{github.actor}}"
         env:
           TEST: testing
