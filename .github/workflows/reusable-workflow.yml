@@ -1,0 +1,11 @@
+name: Reusable Workflow
+run-name: A Workflow that is Reusable
+on:
+  workflow_call:
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echoing
+        run: echo "Echoing Homiee"

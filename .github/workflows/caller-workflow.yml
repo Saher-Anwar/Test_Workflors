@@ -1,0 +1,15 @@
+name: Caller Workflow
+run-name: This Workflow calls the Reusable Workflow
+on:
+  push:
+    branches:
+      - reusable-workflows
+
+jobs:
+  caller-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v4
+      - name: calling other workflow
+        uses: ./.github/workflows/reusable-workflow.yml
