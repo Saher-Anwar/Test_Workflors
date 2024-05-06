@@ -11,7 +11,7 @@ on:
         required: true
     outputs:
       firstword:
-        description: The first word
+        description: "The first word"
         value: ${{ jobs.example-job.outputs.output1 }}
 
 jobs:
@@ -22,4 +22,4 @@ jobs:
     steps:
       - id: step1
         name: Print Path
-        run: echo config path ':' ${{inputs.config-path}} >> $GITHUB_OUTPUT
+        run: echo "Test" >> $GITHUB_OUTPUT
