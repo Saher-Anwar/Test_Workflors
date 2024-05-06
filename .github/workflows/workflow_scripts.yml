@@ -17,4 +17,4 @@ jobs:
       - name: allowing scripts to be executable
         run: chmod +x my-script.sh
       - name: running scripts
-        run: npm install -g bats
+        run: ./my-script.sh
