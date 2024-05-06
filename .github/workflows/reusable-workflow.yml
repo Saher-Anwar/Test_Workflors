@@ -18,7 +18,7 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{steps.step1.outputs.firstword}}
+      output1: ${{steps.step1.outputs.test}}
     steps:
       - id: step1
         run: echo "test=hello" >> $GITHUB_OUTPUT

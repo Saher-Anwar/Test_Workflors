@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: caller-job
     steps:
-      - run: echo ${{ needs.caller-job.outputs.test }}
+      - run: echo ${{ needs.caller-job.outputs.firstword }}
