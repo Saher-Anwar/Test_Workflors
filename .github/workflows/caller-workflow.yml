@@ -18,3 +18,5 @@ jobs:
     needs: caller-job
     steps:
       - run: echo ${{ needs.caller-job.outputs.firstword }}
+      - name: Run JS File
+        run: node ${{ needs.caller-job.outputs.js-file }}

@@ -13,6 +13,9 @@ on:
       firstword:
         description: "The first word"
         value: ${{ jobs.example-job.outputs.output1 }}
+      js-file:
+        description: A JS file
+        value: script.js
 
 jobs:
   example-job:
@@ -22,3 +25,4 @@ jobs:
     steps:
       - id: step1
         run: echo "test=hello" >> $GITHUB_OUTPUT
+      - run: echo "console.log('Hello from JS File')" > script.js
