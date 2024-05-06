@@ -9,10 +9,17 @@ on:
     secrets:
       envPAT:
         required: true
+    outputs:
+      firstword:
+        description: The first word
+        value: ${{ jobs.example-job.outputs.output1 }}
 
 jobs:
   example-job:
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{steps.step1.outputs.firstword}}
     steps:
-      - name: Print Path
+      - id: step1
+        name: Print Path
         run: echo config path ':' ${{inputs.config-path}}
