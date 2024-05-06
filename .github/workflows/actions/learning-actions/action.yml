@@ -8,3 +8,4 @@ inputs:
 outputs:
   results-file:
     description: "Path to results file"
+runs: echo "Testing this stuff"
