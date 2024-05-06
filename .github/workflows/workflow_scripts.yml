@@ -14,5 +14,7 @@ jobs:
     steps:
       - name: checking out repo
         uses: actions/checkout@v4
+      - name: allowing scripts to be executable
+        run: chmod +x my-script.sh
       - name: running scripts
         run: ./my-script.sh
